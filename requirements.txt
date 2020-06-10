@@ -4,3 +4,4 @@ cufflinks==0.17.0
 jupyterlab
 pyaml
 geobr
+matplotlib
