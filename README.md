@@ -21,7 +21,7 @@ Repositório com o código de análises para a mídia e interno.
 
 2️⃣ [Ativar o ambiente virtual de modelagem](#2-ativando-ambiente-de-modelagem)
 
-3️⃣ [Criar seu notebook em `analysis`](#3-criando-seu-notebook)
+3️⃣ [Criar seu notebook em `notebooks`](#3-criando-seu-notebook)
 
 4️⃣ [Puxar os dados da API](#4-puxando-dados-da-api)
 
