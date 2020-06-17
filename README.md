@@ -1,45 +1,118 @@
-## Project Title
+# Análises sobre COVID-19
 
-One Paragraph of project description goes here.
+Repositório com o código de análises para a mídia e interno.
 
-### Project Organization
+### Organização
 
     ├── LICENSE
-    ├── README.md                  <- The top-level README for developers using this project (also know as this file!)
+    ├── README.md                  <- Esse arquivo com instruções gerais! :)
     ├── data
-    │   ├── output                 <- Output processed data
-    │   ├── treated                <- The cleaned and treated data for analysis
-    │   └── raw                    <- The original, immutable data dump
-    ├── notebooks                  <- Jupyter notebooks
-    ├── scripts                    <- Python files
-    ├── requirements.txt           <- Packages used in the code
+    │   ├── output                 <- Tabelas de resultados
+    │   ├── treated                <- Dados tratados
+    │   └── raw                    <- Dados orginais (caso não tenha url)
+    ├── notebooks                  <- Notebooks com as análises
+    ├── scripts                    <- Scripts (caso use para tratamento)
+    ├── requirements.txt           <- Pacotes do ambiente de análise
 
-### Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Como fazer análises
 
-#### Prerequisites
+1️⃣ [Criar um branch para suas análises](#1-criando-seu-branch)
 
-You need to have the packages on `requirements.txt` installed. To do that, open the terminal and run:
+2️⃣ [Ativar o ambiente virtual de modelagem](#2-ativando-ambiente-de-modelagem)
+
+3️⃣ [Criar seu notebook em `analysis`](#3-criando-seu-notebook)
+
+4️⃣ [Puxar os dados da API](#4-puxando-dados-da-api)
+
+5️⃣ [Subir sua análise no repo via _pull request_](#5-subindo-análise-no-repositório)
+
+### 1. Criando seu branch
+
+Depois de clonar o repositório no seu computador, crie uma branch para desenvolver suas análises.
+
+```bash
+$ git checkout -b analysis_[usuario] # ex: git checkout -b analysis_fernandascovino
+```
+
+Caso já tenha passado um tempo que você criou o branch e queira subir outro notebook, lembre-se puxar as atualizações do `master` para seu branch:
+
+```bash
+$ git checkout analysis_[usuario] # ex: git checkout -b analysis_fernandascovino
+
+$ git pull
+
+$ git merge master
+
+# Para checar as mudanças
+$ git status
+```
+
+💬 Concentre suas análises nesse branch para evitar problemas de versionamento
+
+### 2. Ativando ambiente de modelagem
+
+```bash
+# Instale o 'make'
+$ sudo apt-get install -y make
+
+# Crie o virtualenv
+$ make create-env
+
+# Ative o ambiente
+$ . .coronacidades-analysis/bin/activate
+
+# Abra o jupyter
+$ jupyter notebook
+
+# Mude o kernel do notebook para .coronacidades-analysis
+```
+
+### 3. Criando seu notebook
+
+Boas práticas:
+
+- Nomeclatuta: `[data]_[conteudo].ipynb` 
+> ex: `06-02 Onda de Mortes por Covid-19.ipynb`
+
+- Primeira célula deve conter a descrição da análise.
+
+- Deixe sempre o código limpo e legível :)
+
+- Caso use um pacote novo, adicione na lista de pacotes em `requeirements.txt`
+
+### 4. Puxando dados da API
+
+Todos os dados da API podem ser acessados aqui: http://datasource.coronacidades.org:7000/v1/, veja a lista de tabelas [aqui](https://github.com/ImpulsoGov/simulacovid-datasource/blob/master/README.md).
+
+⚠️ **Não suba tabelas para o repositório caso não seja necessário!** Verifique sempre se o dado é sensível e/ou pesado ⚠️
+
+- Caso você use outros arquivos na sua análise, coloque dentro da pasta `data/raw`
+- Caso você gere arquivos na sua análise, coloque dentro da pasta `data/output`
+
+
+### 5. Subindo análise no repositório
+
+Tudo pronto para mostrar suas análises para outr@s colaborador@s? Então, no sua cópia local, adicione os arquivos para criar o _pull request_:
+
+```bash
+# Veja o que você mudou, e verifique se você está na sua branch!
+$ git status
+
+# Adicione o notebook no track
+$ git add notebooks/[nome do notebook] # ex: git add notebooks/06-02 Onda de Mortes por Covid-19.ipynb
+
+# Adicione uma msg sobre sua analise
+$ git commit -m "[breve msg esplicando o que foi feito]"
+
+# Envie seu notebook para o GitHub subindo o seu branch!
+$ git push
 
 ```
-pip3 install -U -r requirements.txt
-```
 
-#### Changing author
+Depois de dar `push`, você verá no GitHub um aviso em amarelo que seu branch foi modificado. Lá terá um botão para `Create pull request` - pronto!
 
-You need change to your name on the files: [LICENSE.md](LICENSE.md), here (below) and optionally put on your code files :)
+## Licença
 
-### Authors
-
-* **You** - *Code maker* - [@you](https://github.com/@you)
-
-### License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-### Acknowledgments
-
-* This README was adapted from [*A template to make good README.md*](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* The structure of this repository was adapted from [*Fast Project Templates*](https://github.com/JoaoCarabetta/project-templates)
+OS códigos desse projeto estão licenciados sob *MIT License* - veja detalhes de uso e compartilhamento em [LICENSE.md](LICENSE.md).
 
