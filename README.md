@@ -1,6 +1,6 @@
 # Análises sobre COVID-19
 
-Repositório com o código de análises para a mídia e interno.
+Repositório com o código de análises de Covid-19 nos municípios e estados brasileiros para mídia e interno.
 
 ### Organização
 
