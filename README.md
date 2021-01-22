@@ -79,7 +79,7 @@ Boas práticas:
 
 - Deixe sempre o código limpo e legível :)
 
-- Caso use um pacote novo, adicione na lista de pacotes em `requeirements.txt`
+- Caso use um pacote novo, adicione na lista de pacotes em `requirements.txt`
 
 ### 4. Puxando dados da API
 
@@ -93,7 +93,7 @@ Todos os dados da API podem ser acessados aqui: http://datasource.coronacidades.
 
 ### 5. Subindo análise no repositório
 
-Tudo pronto para mostrar suas análises para outr@s colaborador@s? Então, no sua cópia local, adicione os arquivos para criar o _pull request_:
+Tudo pronto para mostrar suas análises para outr@s colaborador@s? Então, na sua cópia local, adicione os arquivos para criar o _pull request_:
 
 ```bash
 # Veja o que você mudou, e verifique se você está na sua branch!
@@ -103,7 +103,7 @@ $ git status
 $ git add notebooks/[nome do notebook] # ex: git add notebooks/06-02 Onda de Mortes por Covid-19.ipynb
 
 # Adicione uma msg sobre sua analise
-$ git commit -m "[breve msg esplicando o que foi feito]"
+$ git commit -m "[breve msg explicando o que foi feito]"
 
 # Envie seu notebook para o GitHub subindo o seu branch!
 $ git push
@@ -114,5 +114,4 @@ Depois de dar `push`, você verá no GitHub um aviso em amarelo que seu branch f
 
 ## Licença
 
-OS códigos desse projeto estão licenciados sob *MIT License* - veja detalhes de uso e compartilhamento em [LICENSE.md](LICENSE.md).
-
+Os códigos desse projeto estão licenciados sob *MIT License* - veja detalhes de uso e compartilhamento em [LICENSE.md](LICENSE.md).
