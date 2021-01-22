@@ -5,13 +5,13 @@ Este repositório contêm os dados e scripts utilizados para a estimação do n�
 O trabalho se pautou em dados públicos para calcular a intersecção entre cada um dos grupos, de modo a apresentar os quantitativos líquidos de cada grupo. Assim, por exemplo, foram descontados do grupo de 60 a 64 anos todos os indivíduos que fariam parte desta faixa etária mas que foram vacinados em fases anteriores da campanha de imunização.
 
 
-## Diretório `code`:
+## Diretório `Script`:
 
-#### 1-capturar-tweets
+#### 1-grupos_prioritarios_municipios_divulgacao.R
 Código usado na análise
 
 
-## Diretório `raw`:
+## Diretório `Raw`:
 
 #### 1-pop_faixas_etarias_mun.csv
 Arquivo com dados demográficos de 2020 por faixa etária e município do Ministério da Saúde 
@@ -19,7 +19,7 @@ Arquivo com dados demográficos de 2020 por faixa etária e município do Minist
 #### 2-Censo_SUAS.xlsx
 Variáveis do Censo SUAS de 2019 selecionadas para a análise
 
-## Diretório `treated`:
+## Diretório `Treated`:
 
 #### 1-Trabalhadores_saude_detalhado.csv 
 Arquivo com o número de trabalhadores da saúde extraído do CNES de novembro de 2020 por município
