@@ -9,10 +9,15 @@ O trabalho se pautou em dados públicos para calcular a intersecção entre cada
 #### Contém os arquivos necessários para executar o script de estimação dos grupos prioritários líquidos: 
 
 censo_SUAS.xlsx
+
 campanha_influenza_2020.xlsx
+
 deficientes_2010.xlsx
+
 pop_faixas_etarias_mun.csv
+
 pop_faixas_etarias_uf_detalhe.xlsx
+
 variacao_pop_2010_2020.csv
 
 ## Diretório `Script`:
